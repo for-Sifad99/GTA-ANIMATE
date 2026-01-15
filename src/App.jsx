@@ -32,7 +32,7 @@ export default function App() {
         });
     });
 
-    // animation
+    // Landing section animation
     useGSAP(() => {
         const main = document.querySelector('.main');
 
@@ -46,13 +46,14 @@ export default function App() {
                 x: XMove,
             });
             gsap.to('.bg', {
-                x: XMove * 0.7  ,
+                x: XMove * 0.7,
             });
         });
     }, [showContent]);
 
     return (
         <>
+            {/* Website intro part */}
             <div className="svg flex items-center justify-center fixed top-0 left-0 z-50 w-full h-screen overflow-hidden bg-black">
                 <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
                     <defs>
@@ -83,8 +84,10 @@ export default function App() {
                 </svg>
             </div>
 
+            {/* Full landing part */}
             {showContent && (
                 <div className="main w-full">
+                    {/* Landing top part */}
                     <div className="landing w-full h-screen bg-black">
                         <div className="navbar absolute z-10 top-0 left-0 w-full py-16 px-16">
                             <div className="logo flex gap-6">
@@ -139,6 +142,47 @@ export default function App() {
                                 src="./ps5.png"
                                 alt=""
                             />
+                        </div>
+                    </div>
+
+                    {/* Landing bottom part */}
+                    <div className="w-full h-screen flex items-center justify-center bg-black">
+                        <div className="cntnr flex text-white w-full h-[80%]">
+                            <div className="leftimg relative w-1/2 h-full">
+                                <img
+                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.3]"
+                                    src="./sidech.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="rightimg w-[30%] py-36">
+                                <h1 className="text-8xl">Still Running,</h1>
+                                <h1 className="text-8xl">Not Hunting</h1>
+                                <p className="mt-10 text-2xl font-[Helvetica_Now_Display]">
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Laudantium quos officiis
+                                    incidunt id! Reiciendis, laborum quibusdam
+                                    obcaecati eius ullam dicta omnis id
+                                    corrupti? Pariatur et nam assumenda dicta
+                                    adipisci debitis nostrum quasi maiores
+                                    veritatis? Assumenda?
+                                </p>
+                                <p className="mt-3 text-2xl font-[Helvetica_Now_Display]">
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Placeat et nobis fugit,
+                                    cupiditate perspiciatis fuga neque.
+                                </p>
+                                <p className="mt-3 text-2xl font-[Helvetica_Now_Display]">
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Accusantium inventore
+                                    placeat voluptates dolorem nobis ipsum, quae
+                                    maiores soluta sunt neque incidunt saepe
+                                    tempora consectetur, sit debitis.
+                                </p>
+                                <button className="bg-yellow-500 px-16 py-10 text-black text-4xl mt-10">
+                                    Download Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
