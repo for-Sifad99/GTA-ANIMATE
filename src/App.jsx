@@ -34,6 +34,50 @@ export default function App() {
 
     // Landing section animation
     useGSAP(() => {
+        if (!showContent) return;
+
+        gsap.to('.main', {
+            scale: 1,
+            rotate: 0,
+            duration: 2,
+            delay: '-1',
+            ease: 'Expo.easeInOut',
+        });
+
+        gsap.to('.sky', {
+            scale: 1.1,
+            rotate: 0,
+            duration: 2,
+            delay: '-.8',
+            ease: 'Expo.easeInOut',
+        });
+
+        gsap.to('.bg', {
+            scale: 1.1,
+            rotate: 0,
+            duration: 2,
+            delay: '-.8',
+            ease: 'Expo.easeInOut',
+        });
+
+        gsap.to('.charater', {
+            scale: 1.4,
+            x: '-50%',
+            bottom: '-25%',
+            rotate: 0,
+            duration: 2,
+            delay: '-.8',
+            ease: 'Expo.easeInOut',
+        });
+
+        gsap.to('.text', {
+            scale: 1,
+            rotate: 0,
+            duration: 2,
+            delay: '-.8',
+            ease: 'Expo.easeInOut',
+        });
+
         const main = document.querySelector('.main');
 
         main?.addEventListener('mousemove', function (e) {
@@ -86,102 +130,106 @@ export default function App() {
 
             {/* Full landing part */}
             {showContent && (
-                <div className="main w-full">
-                    {/* Landing top part */}
-                    <div className="landing w-full h-screen bg-black">
-                        <div className="navbar absolute z-10 top-0 left-0 w-full py-16 px-16">
-                            <div className="logo flex gap-6">
-                                <div className="lines flex flex-col gap-2">
-                                    <div className="line w-15 h-1.5 bg-white"></div>
-                                    <div className="line w-10 h-1.5 bg-white"></div>
-                                    <div className="line w-5 h-1.5 bg-white"></div>
+                <div className="w-full overflow-hidden">
+                    <div className="main w-full scale-[1.7] rotate-[-10deg]">
+                        {/* Landing top part */}
+                        <div className="landing w-full h-screen bg-black">
+                            <div className="navbar absolute z-10 top-0 left-0 w-full py-16 px-16">
+                                <div className="logo flex gap-6">
+                                    <div className="lines flex flex-col gap-2">
+                                        <div className="line w-15 h-1.5 bg-white"></div>
+                                        <div className="line w-10 h-1.5 bg-white"></div>
+                                        <div className="line w-5 h-1.5 bg-white"></div>
+                                    </div>
+                                    <h3 className="text-4xl leading-none -mt-2.25 text-white">
+                                        Rockstar
+                                    </h3>
                                 </div>
-                                <h3 className="text-4xl leading-none -mt-2.25 text-white">
-                                    Rockstar
-                                </h3>
                             </div>
-                        </div>
-                        <div className="imagediv relative overflow-hidden w-full h-screen">
-                            <img
-                                className="sky absolute top-0 left-0 w-full h-full scale-[1.3] object-cover"
-                                src="./sky.png"
-                                alt=""
-                            ></img>
-                            <img
-                                className="bg absolute top-0 left-0 w-full h-full scale-[1.2] object-cover"
-                                src="./bg.png"
-                                alt=""
-                            ></img>
-                            <div className="text absolute flex flex-col gap-3 top-20 left-1/2 -translate-x-1/2 text-white">
-                                <h3 className="text-[12rem] leading-none -ml-40">
-                                    grand
-                                </h3>
-                                <h3 className="text-[12rem] leading-none -ml-20">
-                                    theft
-                                </h3>
-                                <h3 className="text-[12rem] leading-none -ml-40">
-                                    auto
-                                </h3>
-                            </div>
-                            <img
-                                className="character absolute -bottom-[25%] left-1/2 -translate-x-1/2 scale-[1.4]"
-                                src="./girlbg.png"
-                                alt=""
-                            ></img>
-                        </div>
-                        <div className="btmbar absolute bottom-0 left-0 text-white w-full py-16 px-10 bg-linear-to-t from-black to-transparent">
-                            <div className="flex gap-4 items-center">
-                                <i className="text-4xl ri-arrow-down-line"></i>
-                                <h3 className="text-2xl font-[Helvetica_Now_Display]">
-                                    Scroll Down
-                                </h3>
-                            </div>
-
-                            <img
-                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-22"
-                                src="./ps5.png"
-                                alt=""
-                            />
-                        </div>
-                    </div>
-
-                    {/* Landing bottom part */}
-                    <div className="w-full h-screen flex items-center justify-center bg-black">
-                        <div className="cntnr flex text-white w-full h-[80%]">
-                            <div className="leftimg relative w-1/2 h-full">
+                            <div className="imagediv relative overflow-hidden w-full h-screen">
                                 <img
-                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.3]"
-                                    src="./sidech.png"
+                                    className="sky absolute top-0 left-0 w-full h-full scale-[1.5] rotate-[-20deg] object-cover"
+                                    src="./sky.png"
                                     alt=""
-                                />
+                                ></img>
+                                <img
+                                    className="bg absolute top-0 left-0 w-full h-full scale-[1.8] rotate-3 object-cover"
+                                    src="./bg.png"
+                                    alt=""
+                                ></img>
+                                <div className="text text-white absolute flex flex-col gap-3 top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
+                                    <h3 className="text-[12rem] leading-none -ml-40">
+                                        grand
+                                    </h3>
+                                    <h3 className="text-[12rem] leading-none -ml-20">
+                                        theft
+                                    </h3>
+                                    <h3 className="text-[12rem] leading-none -ml-40">
+                                        auto
+                                    </h3>
+                                </div>
+                                <img
+                                    className="charater absolute -bottom-[150%] left-1/2 -translate-x-1/2 scale-[3] rotate-[-20deg]"
+                                    src="./girlbg.png"
+                                    alt=""
+                                ></img>
+
+                                <div className="btmbar absolute bottom-0 left-0 text-white w-full py-16 px-10 bg-linear-to-t from-black to-transparent">
+                                    <div className="flex gap-4 items-center">
+                                        <i className="text-4xl ri-arrow-down-line"></i>
+                                        <h3 className="text-2xl font-[Helvetica_Now_Display]">
+                                            Scroll Down
+                                        </h3>
+                                    </div>
+
+                                    <img
+                                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-22"
+                                        src="./ps5.png"
+                                        alt=""
+                                    />
+                                </div>
                             </div>
-                            <div className="rightimg w-[30%] py-36">
-                                <h1 className="text-8xl">Still Running,</h1>
-                                <h1 className="text-8xl">Not Hunting</h1>
-                                <p className="mt-10 text-2xl font-[Helvetica_Now_Display]">
-                                    Lorem, ipsum dolor sit amet consectetur
-                                    adipisicing elit. Laudantium quos officiis
-                                    incidunt id! Reiciendis, laborum quibusdam
-                                    obcaecati eius ullam dicta omnis id
-                                    corrupti? Pariatur et nam assumenda dicta
-                                    adipisci debitis nostrum quasi maiores
-                                    veritatis? Assumenda?
-                                </p>
-                                <p className="mt-3 text-2xl font-[Helvetica_Now_Display]">
-                                    Lorem, ipsum dolor sit amet consectetur
-                                    adipisicing elit. Placeat et nobis fugit,
-                                    cupiditate perspiciatis fuga neque.
-                                </p>
-                                <p className="mt-3 text-2xl font-[Helvetica_Now_Display]">
-                                    Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing elit. Accusantium inventore
-                                    placeat voluptates dolorem nobis ipsum, quae
-                                    maiores soluta sunt neque incidunt saepe
-                                    tempora consectetur, sit debitis.
-                                </p>
-                                <button className="bg-yellow-500 px-16 py-10 text-black text-4xl mt-10">
-                                    Download Now
-                                </button>
+                        </div>
+
+                        {/* Landing bottom part */}
+                        <div className="w-full h-screen flex items-center justify-center bg-black">
+                            <div className="cntnr flex text-white w-full h-[80%]">
+                                <div className="leftimg relative w-1/2 h-full">
+                                    <img
+                                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.3]"
+                                        src="./sidech.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div className="rightimg w-[30%] py-36">
+                                    <h1 className="text-8xl">Still Running,</h1>
+                                    <h1 className="text-8xl">Not Hunting</h1>
+                                    <p className="mt-10 text-2xl font-[Helvetica_Now_Display]">
+                                        Lorem, ipsum dolor sit amet consectetur
+                                        adipisicing elit. Laudantium quos
+                                        officiis incidunt id! Reiciendis,
+                                        laborum quibusdam obcaecati eius ullam
+                                        dicta omnis id corrupti? Pariatur et nam
+                                        assumenda dicta adipisci debitis nostrum
+                                        quasi maiores veritatis? Assumenda?
+                                    </p>
+                                    <p className="mt-3 text-2xl font-[Helvetica_Now_Display]">
+                                        Lorem, ipsum dolor sit amet consectetur
+                                        adipisicing elit. Placeat et nobis
+                                        fugit, cupiditate perspiciatis fuga
+                                        neque.
+                                    </p>
+                                    <p className="mt-3 text-2xl font-[Helvetica_Now_Display]">
+                                        Lorem ipsum, dolor sit amet consectetur
+                                        adipisicing elit. Accusantium inventore
+                                        placeat voluptates dolorem nobis ipsum,
+                                        quae maiores soluta sunt neque incidunt
+                                        saepe tempora consectetur, sit debitis.
+                                    </p>
+                                    <button className="bg-yellow-500 px-16 py-10 text-black text-4xl mt-10">
+                                        Download Now
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
