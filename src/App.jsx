@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 export default function App() {
+    let [showContent, setShowContent] = useState(false);
     useGSAP(() => {
         const tl = gsap.timeline();
 
@@ -11,15 +12,21 @@ export default function App() {
             duration: 2,
             ease: 'Power4.easeInOut',
             transformOrigin: '50% 50%',
-        })
-        .to('.vi-mask-group',{
+        }).to('.vi-mask-group', {
             scale: 10,
             duration: 2,
             delay: -1.8,
             ease: 'Expo.easeInOut',
             transformOrigin: '50% 50%',
             opacity: 0,
-        })
+            onUpdate: function () {
+                if (this.progress() >= 0.9) {
+                    document.querySelector('.svg').remove();
+                    setShowContent(true);
+                    this.kill();
+                }
+            },
+        });
     });
 
     return (
