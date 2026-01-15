@@ -78,6 +78,14 @@ export default function App() {
             ease: 'Expo.easeInOut',
         });
 
+        gsap.to('.logo18', {
+            scale: 1.2,
+            rotate: 0,
+            duration: 2,
+            delay: '-.8',
+            ease: 'Expo.easeInOut',
+        });
+
         const main = document.querySelector('.main');
 
         main?.addEventListener('mousemove', function (e) {
@@ -155,6 +163,11 @@ export default function App() {
                                 <img
                                     className="bg absolute top-0 left-0 w-full h-full scale-[1.8] rotate-3 object-cover"
                                     src="./bg.png"
+                                    alt=""
+                                ></img>
+                                <img
+                                    className="logo18 absolute bottom-[26%] left-[60%] z-20 w-[5%] scale-[1.8] rotate-[-20deg] object-cover"
+                                    src="./logo18.png"
                                     alt=""
                                 ></img>
                                 <div className="text text-white absolute flex flex-col gap-3 top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
