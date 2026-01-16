@@ -208,15 +208,15 @@ export default function App() {
                             <div className="cntnr flex text-white w-full h-[80%]">
                                 <div className="leftimg relative w-1/2 h-full">
                                     <img
-                                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.3]"
+                                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] scale-[1.3]"
                                         src="./sidech.png"
                                         alt=""
                                     />
                                 </div>
-                                <div className="rightimg w-[30%] py-36">
-                                    <h1 className="text-8xl">Still Running,</h1>
-                                    <h1 className="text-8xl">Not Hunting</h1>
-                                    <p className="mt-10 text-2xl font-[Helvetica_Now_Display]">
+                                <div className="rightimg w-[40%] py-16">
+                                    <h1 className="text-5xl leading-8">Still Running,</h1>
+                                    <h1 className="text-7xl">Not Hunting</h1>
+                                    <p className="mt-8 text-xl font-[Helvetica_Now_Display] leading-5">
                                         Lorem, ipsum dolor sit amet consectetur
                                         adipisicing elit. Laudantium quos
                                         officiis incidunt id! Reiciendis,
@@ -225,20 +225,13 @@ export default function App() {
                                         assumenda dicta adipisci debitis nostrum
                                         quasi maiores veritatis? Assumenda?
                                     </p>
-                                    <p className="mt-3 text-2xl font-[Helvetica_Now_Display]">
+                                    <p className="mt-2 text-xl font-[Helvetica_Now_Display] leading-5">
                                         Lorem, ipsum dolor sit amet consectetur
                                         adipisicing elit. Placeat et nobis
                                         fugit, cupiditate perspiciatis fuga
                                         neque.
                                     </p>
-                                    <p className="mt-3 text-2xl font-[Helvetica_Now_Display]">
-                                        Lorem ipsum, dolor sit amet consectetur
-                                        adipisicing elit. Accusantium inventore
-                                        placeat voluptates dolorem nobis ipsum,
-                                        quae maiores soluta sunt neque incidunt
-                                        saepe tempora consectetur, sit debitis.
-                                    </p>
-                                    <button className="bg-yellow-500 px-16 py-10 text-black text-4xl mt-10">
+                                    <button className="bg-yellow-500 px-16 py-6 text-black text-2xl mt-8">
                                         Download Now
                                     </button>
                                 </div>
