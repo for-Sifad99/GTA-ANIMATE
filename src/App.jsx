@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import 'remixicon/fonts/remixicon.css';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function App() {
     let [showContent, setShowContent] = useState(false);
+    const nextSection = useRef(null);
+
+    // Scroll function
+    const handleNext = () => {
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: nextSection.current,
+            ease: 'power2.inOut',
+        });
+    };
 
     // First intro animation
     useGSAP(() => {
@@ -187,7 +200,7 @@ export default function App() {
                                     alt=""
                                 ></img>
                                 <div className="btmbar absolute bottom-0 left-0 text-white w-full py-10 px-12 bg-linear-to-t from-black to-transparent">
-                                    <div className="flex gap-2 items-center">
+                                    <div onClick={handleNext} className="flex gap-2 items-center">
                                         <i className="text-lg ri-arrow-down-line"></i>
                                         <h3 className="text-md font-[Helvetica_Now_Display] font-bold">
                                             Scroll Down
@@ -204,7 +217,10 @@ export default function App() {
                         </div>
 
                         {/* Landing bottom part */}
-                        <div className="w-full h-screen flex items-center justify-center bg-black">
+                        <div
+                            ref={nextSection}
+                            className="w-full h-screen flex items-center justify-center bg-black"
+                        >
                             <div className="cntnr flex text-white w-full h-[80%]">
                                 <div className="leftimg relative w-1/2 h-full">
                                     <img
@@ -214,7 +230,9 @@ export default function App() {
                                     />
                                 </div>
                                 <div className="rightimg w-[40%] py-16">
-                                    <h1 className="text-5xl leading-8">Still Running,</h1>
+                                    <h1 className="text-5xl leading-8">
+                                        Still Running,
+                                    </h1>
                                     <h1 className="text-7xl">Not Hunting</h1>
                                     <p className="mt-8 text-xl font-[Helvetica_Now_Display] leading-5">
                                         Lorem, ipsum dolor sit amet consectetur
