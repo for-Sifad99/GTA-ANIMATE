@@ -79,7 +79,7 @@ export default function App() {
         });
 
         gsap.to('.logo18', {
-            scale: 1.2,
+            scale: 1,
             rotate: 0,
             duration: 2,
             delay: '-.8',
@@ -142,14 +142,14 @@ export default function App() {
                     <div className="main w-full scale-[1.7] rotate-[-10deg]">
                         {/* Landing top part */}
                         <div className="landing w-full h-screen bg-black">
-                            <div className="navbar absolute z-10 top-0 left-0 w-full py-16 px-16">
-                                <div className="logo flex gap-6">
-                                    <div className="lines flex flex-col gap-2">
-                                        <div className="line w-15 h-1.5 bg-white"></div>
-                                        <div className="line w-10 h-1.5 bg-white"></div>
-                                        <div className="line w-5 h-1.5 bg-white"></div>
+                            <div className="navbar absolute z-10 top-0 left-0 w-full py-10 px-12">
+                                <div className="logo flex gap-4">
+                                    <div className="lines flex flex-col gap-1">
+                                        <div className="line w-25 h-1 bg-white"></div>
+                                        <div className="line w-15 h-1 bg-white"></div>
+                                        <div className="line w-8 h-1 bg-white"></div>
                                     </div>
-                                    <h3 className="text-4xl leading-none -mt-2.25 text-white">
+                                    <h3 className="text-3xl leading-none -mt-2.25 text-white">
                                         Rockstar
                                     </h3>
                                 </div>
@@ -170,33 +170,32 @@ export default function App() {
                                     src="./logo18.png"
                                     alt=""
                                 ></img>
-                                <div className="text text-white absolute flex flex-col gap-3 top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
-                                    <h3 className="text-[12rem] leading-none -ml-40">
+                                <div className="text text-white absolute flex flex-col gap-1.5 top-12 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
+                                    <h3 className="text-[7rem] leading-none -ml-30">
                                         grand
                                     </h3>
-                                    <h3 className="text-[12rem] leading-none -ml-20">
+                                    <h3 className="text-[7rem] leading-none -ml-10">
                                         theft
                                     </h3>
-                                    <h3 className="text-[12rem] leading-none -ml-40">
+                                    <h3 className="text-[7rem] leading-none -ml-30">
                                         auto
                                     </h3>
                                 </div>
                                 <img
-                                    className="charater absolute -bottom-[150%] left-1/2 -translate-x-1/2 scale-[3] rotate-[-20deg]"
+                                    className="charater absolute -bottom-[150%] left-1/2 w-[28%] scale-[3] rotate-[-20deg]"
                                     src="./girlbg.png"
                                     alt=""
                                 ></img>
-
-                                <div className="btmbar absolute bottom-0 left-0 text-white w-full py-16 px-10 bg-linear-to-t from-black to-transparent">
-                                    <div className="flex gap-4 items-center">
-                                        <i className="text-4xl ri-arrow-down-line"></i>
-                                        <h3 className="text-2xl font-[Helvetica_Now_Display]">
+                                <div className="btmbar absolute bottom-0 left-0 text-white w-full py-10 px-12 bg-linear-to-t from-black to-transparent">
+                                    <div className="flex gap-2 items-center">
+                                        <i className="text-lg ri-arrow-down-line"></i>
+                                        <h3 className="text-md font-[Helvetica_Now_Display] font-bold">
                                             Scroll Down
                                         </h3>
                                     </div>
 
                                     <img
-                                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-22"
+                                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-14"
                                         src="./ps5.png"
                                         alt=""
                                     />
